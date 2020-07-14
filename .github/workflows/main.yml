@@ -1,0 +1,18 @@
+on:
+  pull_request:
+    branches:
+      - master
+#  push:
+jobs:
+  ast_scan:
+    runs-on: ubuntu-latest
+    name: Checkmarx scan run
+    steps:
+      - name: Run scan
+        uses: CheckmarxDev/ast-github-action@master
+        id: scan
+        with:
+          github_repo_token: ${{ secrets.GITHUB_TOKEN }}
+          ast_uri: ${{ secrets.AST_URI }}
+          ast_access_key_id: ${{ secrets.AST_ACCESS_KEY_ID }}
+          ast_access_key_secret: ${{ secrets.AST_ACCESS_KEY_SECRET }}
