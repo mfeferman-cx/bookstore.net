@@ -17,7 +17,7 @@ jobs:
           ast_uri: ${{ secrets.AST_URI }}
           ast_access_key_id: ${{ secrets.AST_ACCESS_KEY_ID }}
           ast_access_key_secret: ${{ secrets.AST_ACCESS_KEY_SECRET }}
-          action_scan_complete_timeout_secs: 600
+          action_scan_complete_timeout_secs: 500
           high_results_threshold: -1
           medium_results_threshold: -1
           low_results_threshold: -1
